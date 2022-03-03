@@ -1,0 +1,11 @@
+<footer class="footer_wrapper">
+    <div class="footer_copyright">
+      <span >{{ copyright }}</span>
+    </div>
+    <ul class="footer_social">
+      <li class="social_list" *ngFor="let item of footerMenu">
+        <a class="social_item" [routerLink]="item.url">{{ item.title }}</a>
+        <i [class]="item.icon"></i>
+      </li>
+    </ul>
+</footer>

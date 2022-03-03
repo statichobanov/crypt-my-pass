@@ -1,0 +1,15 @@
+@charset "UTF-8";
+// Base
+@import 'base/typography';
+
+// Configuration and helpers
+@import 'abstract/variables';
+
+// Layout styles
+@import 'layout/navigation', 'layout/footer';
+
+// Page-specific styles
+@import 'pages/encrypt', 'pages/decrypt', 'pages/app';
+
+// Overrides
+@import 'primengOverrides';

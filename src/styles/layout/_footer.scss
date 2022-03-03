@@ -1,0 +1,39 @@
+.footer {
+  &_wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background: $secondary-background;
+    color: $main-font;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 19px;
+    line-height: 50px;
+  }
+
+  &_copyright {
+    align-self: center;
+  }
+
+  &_social {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+
+    .social_list {
+      margin-right: 14px;
+      cursor: pointer;
+
+      .social_item {
+        text-decoration: none;
+        color: $main-font;
+        margin-right: 4px;
+      }
+
+      .pi {
+        font-size: 20px;
+      }
+    }
+  }
+}

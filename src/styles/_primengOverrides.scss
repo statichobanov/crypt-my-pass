@@ -1,0 +1,84 @@
+.p-component {
+  font-family: NatoSans;
+}
+
+.p-button {
+  color: white;
+  border: 1px solid #a3278f;
+  background-color: #a3278f;
+  border-radius: 10px;
+}
+
+// Input fields;
+.p-inputtext {
+  background-color: $input-background;
+  width: 100%;
+  border: 1px solid $main-font;
+  font-size: 16px;
+  line-height: 30px;
+  font-style: italic;
+}
+
+.p-inputwrapper {
+  width: 100%;
+}
+
+// Primeng File upload component overrides
+.p-fileupload {
+  &-content,
+  &-buttonbar {
+    background: $secondary-background !important;
+  }
+
+  .p-fileupload-buttonbar {
+    display: flex;
+    justify-content: space-around;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none;
+  }
+
+  .p-fileupload-content {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    border-top: 1px solid $main-font;
+
+    .p-progressbar {
+      display: none;
+    }
+  }
+}
+
+.p-fileupload-row > div:first-child {
+  display: none !important;
+}
+
+// Primeng SpeedDial component overrides
+.p-speeddial-action {
+  text-decoration: none;
+  width: 55px;
+  height: 55px;
+  background-color: #ff6638;
+  color: white;
+
+  &-icon {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: #d04387;
+    color: #121212;
+  }
+}
+
+.p-speeddial-button.p-button.p-button-icon-only {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-image: linear-gradient(to right, #ff6638, #d04387);
+  border: none;
+
+  .p-button-icon {
+    font-size: 32px;
+  }
+}

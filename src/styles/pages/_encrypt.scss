@@ -1,0 +1,73 @@
+.encrypt_wraper {
+  margin-top: 50px;
+  width: 500px;
+
+  .secretkey {
+    &_wrapper {
+      margin-top: 25px;
+      padding: 35px;
+      background-color: $secondary-background;
+      border-radius: $border-radius;
+    }
+
+    &_info {
+      &_title {
+        padding-bottom: 20px;
+        font-size: 25px;
+        color: white;
+        border-bottom: 1px solid $main-font;
+      }
+
+      &_description {
+        padding: 20px 0;
+      }
+    }
+
+    &_input {
+      &-custom .p-password-panel {
+        background-color: $main-background;
+      }
+
+      &-confirm {
+        margin-top: 15px;
+      }
+
+      &-submit {
+        margin-top: 15px;
+
+        .p-button {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          .p-button-label {
+            flex: none;
+          }
+        }
+      }
+    }
+  }
+
+  .download {
+    &_wrapper {
+      margin-top: 20px;
+      cursor: pointer;
+      background-image: linear-gradient(to right, #ff6638, #d04387);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+
+      .pi.pi-download {
+        color: white;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    &_button {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+  }
+}

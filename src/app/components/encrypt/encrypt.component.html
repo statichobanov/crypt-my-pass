@@ -1,0 +1,55 @@
+<!-- <span class="p-button-icon pi pi-info-circle" aria-hidden="true"></span> -->
+<div class="encrypt_wraper">
+  <div class="file-upload_wrapper">
+    <p-fileUpload
+      accept=".txt, .csv*"
+      [customUpload]="true"
+      (uploadHandler)="upload($event.files[0])"
+      chooseLabel="Select File"
+    ></p-fileUpload>
+  </div>
+
+  <div  *ngIf="fileContent.length" class="secretkey_wrapper">
+    <div class="secretkey_info">
+      <p class="secretkey_info_title">Secretkey</p>
+      <p class="secretkey_info_description">
+        Secretkey will be used to encrypt your file. Write down or remember the
+        key. It is the only way to retrieve the encrypted data back.
+      </p>
+    </div>
+
+    <form [formGroup]="secretkeyForm" (ngSubmit)="onSubmit()">
+      <div class="secretkey_input">
+        <p-password
+          formControlName="secretKey"
+          placeholder="Enter secretkey"
+          styleClass="secretkey_input-custom"
+          promptLabel="Enter secretkey"
+          [toggleMask]="false"
+        ></p-password>
+        <p-password
+          formControlName="secretKeyConfirm"
+          placeholder="Confirm secretkey"
+          styleClass="secretkey_input-confirm"
+          [feedback]="false"
+          [toggleMask]="false"
+        ></p-password>
+      </div>
+      <p *ngIf="secretKeyConfirmControl.errors && secretKeyConfirmControl.errors['match'] === false" class="secretkey_input-error">Make sure the field are matching</p>
+      <div class="secretkey_input-submit">
+        <p-button
+          [disabled]="secretkeyForm.invalid"
+          label="Encrypt file"
+          type="submit"
+          icon="pi pi-key"
+          iconPos="left"
+        ></p-button>
+      </div>
+    </form>
+  </div>
+  
+  <div *ngIf="encryptedFileDownloadUrl" class="download_wrapper">
+    <i class="pi pi-download"></i>
+    <a class="download_button" [href]="encryptedFileDownloadUrl" download="encrypted.txt">Download Encrypted File</a>
+  </div>
+</div>
